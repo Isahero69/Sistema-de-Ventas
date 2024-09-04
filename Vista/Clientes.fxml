@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ClientesController">
+   <children>
+      <Label alignment="CENTER" layoutX="308.0" layoutY="27.0" prefHeight="17.0" prefWidth="396.0" text="Base de Clientes">
+         <font>
+            <Font name="Century Gothic Bold" size="39.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabla" editable="true" layoutX="21.0" layoutY="148.0" onMouseClicked="#seleccionar" prefHeight="348.0" prefWidth="953.0">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="75.0" text="ID" visible="false" />
+            <TableColumn fx:id="NIT" prefWidth="75.0" text="NIT" />
+            <TableColumn fx:id="Nombre" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="Contacto" prefWidth="75.0" text="Contacto" />
+            <TableColumn fx:id="Correo" prefWidth="75.0" text="Correo" />
+            <TableColumn fx:id="Direccion" prefWidth="75.0" text="Direccion" />
+            <TableColumn fx:id="Naturaleza" prefWidth="75.0" text="Naturaleza" />
+            <TableColumn fx:id="Tipo_Credito" prefWidth="75.0" text="Tipo Credito" />
+            <TableColumn fx:id="Dias_Plazo" prefWidth="75.0" text="Dias Plazo" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="editarCliente" layoutX="21.0" layoutY="511.0" mnemonicParsing="false" onAction="#editarCliente" prefHeight="40.0" prefWidth="230.0" text="Editar">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="eliminarCliente" layoutX="261.0" layoutY="511.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="40.0" prefWidth="230.0" text="Eliminar">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="crearCliente" layoutX="704.0" layoutY="100.0" mnemonicParsing="false" onAction="#crearCliente" prefHeight="35.0" prefWidth="270.0" text="Crear Cliente">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="regresar" layoutX="500.0" layoutY="511.0" mnemonicParsing="false" onAction="#regresar" prefHeight="40.0" prefWidth="230.0" text="Regresar">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="buscarCliente" layoutX="207.0" layoutY="102.0" onKeyReleased="#escribir" prefHeight="35.0" prefWidth="482.0" promptText="Escribe el nombre del cliente" />
+      <Label layoutX="21.0" layoutY="110.0" text="Buscar Nombre Cliente">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

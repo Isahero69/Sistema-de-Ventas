@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="tablaDetalle" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EstadosdeCuenta.DetalleFacturaController">
+   <children>
+      <Label fx:id="titulo" alignment="CENTER" layoutX="7.0" prefHeight="39.0" prefWidth="406.0">
+         <font>
+            <Font name="Century Gothic Bold" size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabladetalle" layoutX="26.0" layoutY="91.0" prefHeight="395.0" prefWidth="863.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="ID" visible="false" />
+          <TableColumn fx:id="item" prefWidth="20.0" text="Item" />
+            <TableColumn fx:id="codigo" prefWidth="40.0" text="Codigo" />
+            <TableColumn fx:id="producto" prefWidth="150.0" text="Producto" />
+            <TableColumn fx:id="cantidades" prefWidth="50.0" text="Cantidades" />
+            <TableColumn fx:id="precio" prefWidth="75.0" text="Precio Und" />
+            <TableColumn fx:id="subtotal" prefWidth="75.0" text="Subtotal" />
+            <TableColumn fx:id="iva" prefWidth="75.0" text="IVA" />
+            <TableColumn fx:id="total" prefWidth="75.0" text="Total" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="26.0" layoutY="59.0" prefHeight="25.0" prefWidth="130.0" text="Nombre Cliente">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font></Label>
+      <Button fx:id="salirDetalle" layoutX="729.0" layoutY="35.0" mnemonicParsing="false" onAction="#salirDetalle" prefHeight="48.0" prefWidth="157.0" text="SALIR">
+         <font>
+            <Font name="Century Gothic Bold" size="26.0" />
+         </font></Button>
+      <TextField fx:id="nombreCliente" editable="false" layoutX="153.0" layoutY="57.0" prefHeight="25.0" prefWidth="521.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+   </children>
+</AnchorPane>

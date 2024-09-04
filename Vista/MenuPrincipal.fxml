@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.MenuPrincipalController">
+   <children>
+      <Label alignment="CENTER" layoutX="36.0" layoutY="22.0" prefHeight="46.0" prefWidth="647.0" text="SISTEMA DE VENTAS H&amp;R" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnClientes" alignment="CENTER" layoutX="359.0" layoutY="97.0" mnemonicParsing="false" onAction="#eventAction" prefHeight="56.0" prefWidth="315.0" text="Base Clientes">
+         <font>
+            <Font name="Century Gothic Bold" size="27.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnProductos" alignment="CENTER" layoutX="359.0" layoutY="161.0" mnemonicParsing="false" onAction="#eventAction" prefHeight="56.0" prefWidth="315.0" text="Base Productos">
+         <font>
+            <Font name="Century Gothic Bold" size="27.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVender" alignment="CENTER" layoutX="35.0" layoutY="100.0" mnemonicParsing="false" onAction="#eventAction" prefHeight="150.0" prefWidth="315.0" text="Ingresar Venta" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Century Gothic Bold" size="45.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnPagarCredito" alignment="CENTER" layoutX="359.0" layoutY="225.0" mnemonicParsing="false" onAction="#eventAction" prefHeight="56.0" prefWidth="315.0" text="Pagar Creditos">
+         <font>
+            <Font name="Century Gothic Bold" size="27.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnestadoCuenta" alignment="CENTER" contentDisplay="TOP" layoutX="359.0" layoutY="354.0" mnemonicParsing="false" onAction="#eventAction" prefHeight="56.0" prefWidth="315.0" text="Estados de Cuenta">
+         <font>
+            <Font name="Century Gothic Bold" size="27.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnreporteVentas" alignment="CENTER" contentDisplay="TOP" layoutX="359.0" layoutY="290.0" mnemonicParsing="false" onAction="#eventAction" prefHeight="56.0" prefWidth="315.0" text="Reporte de Ventas">
+         <font>
+            <Font name="Century Gothic Bold" size="27.0" />
+         </font>
+      </Button>
+      <Button fx:id="salir" alignment="CENTER" layoutX="35.0" layoutY="354.0" mnemonicParsing="false" onAction="#salir" prefHeight="56.0" prefWidth="315.0" text="SALIR">
+         <font>
+            <Font name="Century Gothic Bold" size="26.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="449.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.CrearProductosController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="3.0" prefHeight="449.0" prefWidth="559.0">
+         <children>
+            <VBox layoutX="33.0" layoutY="81.0" prefHeight="280.0" prefWidth="166.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="190.0" text="Codigo">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets bottom="2.0" />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="193.0" text="Nombre Producto">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="6.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="171.0" text="Inventario">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="7.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="167.0" text="Precio">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="169.0" text="Impuesto">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="6.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="170.0" text="Presentacion">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="168.0" text="Marca">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="6.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="171.0" text="Tipo Producto">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="8.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" layoutX="51.0" layoutY="14.0" prefHeight="46.0" prefWidth="440.0" text="Crear Producto">
+               <font>
+                  <Font name="Century Gothic Bold" size="36.0" />
+               </font>
+            </Label>
+            <VBox layoutX="214.0" layoutY="85.0" prefHeight="280.0" prefWidth="316.0">
+               <children>
+                  <TextField fx:id="codigo" onAction="#codigo" onKeyTyped="#validartextoCodigo" prefHeight="15.0" promptText="Ingresar Codigo">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="nombre" layoutX="10.0" layoutY="10.0" onAction="#nombreproducto" prefHeight="15.0" promptText="Ingrese Nombre Producto">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="inventario" layoutX="10.0" layoutY="35.0" onAction="#inventario" onKeyTyped="#validartextoinventario" prefHeight="15.0" promptText="Ingrese Cantidad Inicial">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="precio" layoutX="10.0" layoutY="60.0" onKeyTyped="#validartextoprecio" prefHeight="15.0" promptText="Ingrese Precio">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <ComboBox fx:id="impuesto" onAction="#impuesto" prefHeight="25.0" prefWidth="401.0" promptText="Seleccione">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="presentacion" onAction="#presentacion" prefHeight="25.0" prefWidth="401.0" promptText="Seleccione">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="marca" layoutX="10.0" layoutY="185.0" onAction="#marca" prefHeight="25.0" prefWidth="401.0" promptText="Seleccione">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="TipoProducto" layoutX="10.0" layoutY="210.0" onAction="#TipoProducto" prefHeight="25.0" prefWidth="401.0" promptText="Seleccione">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+               </children>
+            </VBox>
+            <Button fx:id="guardar" layoutX="121.0" layoutY="381.0" mnemonicParsing="false" onAction="#guardarProducto" prefHeight="41.0" prefWidth="186.0" text="Guardar">
+               <font>
+                  <Font name="Century Gothic Bold" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="regresar" layoutX="335.0" layoutY="381.0" mnemonicParsing="false" onAction="#regresar" prefHeight="41.0" prefWidth="145.0" text="Regresar">
+               <font>
+                  <Font name="Century Gothic Bold" size="21.0" />
+               </font>
+            </Button>
+            <Label fx:id="txtadvertencia" alignment="CENTER_RIGHT" layoutX="304.0" layoutY="73.0" prefHeight="17.0" prefWidth="226.0" textAlignment="RIGHT" textFill="#f80909">
+               <font>
+                  <Font name="Century Gothic Bold" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

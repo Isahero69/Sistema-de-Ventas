@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="206.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ModificarUndsController">
+   <children>
+      <Button fx:id="actualizar" layoutX="175.0" layoutY="136.0" mnemonicParsing="false" onAction="#actualizar" prefHeight="50.0" prefWidth="179.0" text="Actualizar">
+         <font>
+            <Font name="Century Gothic Bold" size="25.0" />
+         </font>
+      </Button>
+      <TextField fx:id="nuevasunidades" alignment="CENTER" layoutX="182.0" layoutY="60.0" onAction="#nuevasunidades" prefHeight="50.0" prefWidth="166.0" promptText="Nuevas Unidades">
+         <font>
+            <Font name="Century Gothic Bold" size="17.0" />
+         </font>
+      </TextField>
+      <Label layoutX="67.0" layoutY="14.0" prefHeight="35.0" prefWidth="446.0" text="Ingresa las nuevas Unidades del Producto">
+         <font>
+            <Font name="Century Gothic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="salir" layoutX="381.0" layoutY="142.0" mnemonicParsing="false" onAction="#salir" prefHeight="35.0" prefWidth="106.0" text="Salir">
+         <font>
+            <Font name="Century Gothic Bold" size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

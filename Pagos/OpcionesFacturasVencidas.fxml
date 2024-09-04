@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="428.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pagos.OpcionesFacturasVencidasController">
+   <children>
+      <Label fx:id="titulo" alignment="CENTER" layoutX="22.0" layoutY="14.0" prefHeight="38.0" prefWidth="505.0" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="mensaje" alignment="CENTER" layoutX="22.0" layoutY="51.0" prefHeight="149.0" prefWidth="505.0" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Century Gothic" size="30.0" />
+         </font>
+      </Label>
+      <HBox layoutX="31.0" layoutY="259.0" prefHeight="82.0" prefWidth="484.0">
+         <children>
+            <Button fx:id="verfacturas" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#verfacturas" prefHeight="80.0" prefWidth="237.0" text="Ver Facturas Vencidas" textAlignment="CENTER" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="83.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/facturasvencidas-peque.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="continuar" mnemonicParsing="false" onAction="#continuar" prefHeight="80.0" prefWidth="221.0" text="Continuar Venta a Contado" textAlignment="CENTER" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/seguir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Century Gothic Bold" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Button fx:id="regresar" layoutX="155.0" layoutY="349.0" mnemonicParsing="false" onAction="#regresar" prefHeight="50.0" prefWidth="237.0" text="Regresar" wrapText="true">
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/regresar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </Button>
+      <Separator layoutX="15.0" layoutY="51.0" prefHeight="3.0" prefWidth="517.0" />
+      <Label fx:id="titulo1" alignment="CENTER" layoutX="22.0" layoutY="206.0" prefHeight="38.0" prefWidth="505.0" text="¿Que deseas hacer?" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="numero" alignment="CENTER" layoutX="462.0" layoutY="376.0" prefHeight="38.0" prefWidth="78.0" textAlignment="CENTER" visible="false">
+         <font>
+            <Font name="Century Gothic Bold" size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

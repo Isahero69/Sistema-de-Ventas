@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="442.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.CrearClienteController">
+   <children>
+      <VBox layoutX="23.0" layoutY="74.0" prefHeight="280.0" prefWidth="141.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="164.0" text="NIT">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="2.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="8.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="155.0" text="Nombre">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="6.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="147.0" text="Contacto">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="7.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="153.0" text="Correo">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="151.0" text="Direccion">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="6.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="152.0" text="Naturaleza">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="8.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="153.0" text="Dias de Plazo">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="6.0" />
+               </VBox.margin>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="155.0" text="Tipo Cliente">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="8.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="62.0" layoutY="7.0" prefHeight="46.0" prefWidth="398.0" text="Crear Cliente">
+         <font>
+            <Font name="Century Gothic Bold" size="36.0" />
+         </font>
+      </Label>
+      <VBox layoutX="173.0" layoutY="74.0" prefHeight="280.0" prefWidth="316.0">
+         <children>
+            <TextField fx:id="nit" onAction="#validarNit2" onKeyTyped="#validarNit" prefHeight="15.0" promptText="Ingrese Nit Cliente">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="nombre" layoutX="10.0" layoutY="10.0" onAction="#nombre2" prefHeight="15.0" promptText="Ingrese Nombre Cliente">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="contacto" layoutX="10.0" layoutY="35.0" onAction="#contacto2" onKeyTyped="#contacto" prefHeight="15.0" promptText="Ingrese Contacto Cliente">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="correo" layoutX="10.0" layoutY="60.0" onAction="#correo2" onKeyTyped="#correo" prefHeight="15.0" promptText="Ingrese Correo Cliente">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="direccion" layoutX="10.0" layoutY="85.0" onAction="#direccion2" prefHeight="15.0" promptText="Ingrese Direccion Cliente">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <ComboBox fx:id="naturaleza" onAction="#ingresarnaturaleza" prefHeight="25.0" prefWidth="401.0" promptText="Seleccione">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="diasPlazo" layoutX="10.0" layoutY="185.0" onAction="#ingresardiasPlazo" prefHeight="25.0" prefWidth="401.0" promptText="Seleccione">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="tipoCliente" layoutX="10.0" layoutY="210.0" onAction="#ingresartipoCliente" prefHeight="25.0" prefWidth="401.0" promptText="Seleccione">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </ComboBox>
+         </children>
+      </VBox>
+      <Button fx:id="guardar" layoutX="129.0" layoutY="375.0" mnemonicParsing="false" onAction="#guardarCliente" text="Guardar">
+         <font>
+            <Font name="Century Gothic Bold" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="regresar" layoutX="272.0" layoutY="375.0" mnemonicParsing="false" onAction="#regresar" text="Regresar">
+         <font>
+            <Font name="Century Gothic Bold" size="21.0" />
+         </font>
+      </Button>
+      <Label fx:id="txtadvertencia" alignment="CENTER_RIGHT" layoutX="263.0" layoutY="60.0" prefHeight="17.0" prefWidth="226.0" textAlignment="RIGHT" textFill="#f80909">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

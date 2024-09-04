@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.ReporteVentasController">
+   <children>
+      <Label alignment="CENTER" layoutX="425.0" prefHeight="43.0" prefWidth="469.0" text="Reporte de  Ventas">
+         <font>
+            <Font name="Century Gothic Bold" size="34.0" />
+         </font></Label>
+      <LineChart fx:id="graficoLinea" animated="false" layoutX="7.0" layoutY="356.0" prefHeight="283.0" prefWidth="593.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Total Facutras + IVA" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <BarChart fx:id="graficoBarras" animated="false" layoutX="617.0" layoutY="353.0" prefHeight="289.0" prefWidth="583.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Total Factura + IVA" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <DatePicker fx:id="fechaInicial" editable="false" layoutX="35.0" layoutY="81.0" onAction="#fechaInicial" promptText="Seleccione Fecha Inicial" />
+      <DatePicker fx:id="fechaFinal" editable="false" layoutX="34.0" layoutY="137.0" onAction="#fechafinal" promptText="Seleccione Fecha Final" />
+      <Label alignment="CENTER" layoutX="35.0" layoutY="57.0" prefHeight="25.0" prefWidth="174.0" text="Fecha Inicial">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="35.0" layoutY="112.0" prefHeight="25.0" prefWidth="174.0" text="Fecha Final">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="414.0" layoutY="57.0" prefHeight="25.0" prefWidth="406.0" text="Cliente">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="mes" layoutX="219.0" layoutY="81.0" onAction="#mes" prefHeight="25.0" prefWidth="187.0" promptText="Seleccione Mes" />
+      <Label alignment="CENTER" layoutX="219.0" layoutY="57.0" prefHeight="25.0" prefWidth="187.0" text="Mes">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="220.0" layoutY="112.0" prefHeight="25.0" prefWidth="187.0" text="Año">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="year" layoutX="219.0" layoutY="137.0" onAction="#year" prefHeight="25.0" prefWidth="187.0" promptText="Seleccione Año" />
+      <ComboBox fx:id="cliente" layoutX="414.0" layoutY="81.0" onAction="#cliente" prefHeight="25.0" prefWidth="406.0" promptText="Seleccione Cliente" />
+      <Button fx:id="limpiar" layoutX="869.0" layoutY="71.0" mnemonicParsing="false" onAction="#limpiar" prefHeight="25.0" prefWidth="135.0" text="Limpiar">
+         <font>
+            <Font name="Century Gothic Bold" size="23.0" />
+         </font></Button>
+      <Button fx:id="regresar" layoutX="1023.0" layoutY="71.0" mnemonicParsing="false" onAction="#regresar" prefHeight="25.0" prefWidth="135.0" text="Regresar">
+         <font>
+            <Font name="Century Gothic Bold" size="23.0" />
+         </font></Button>
+      <VBox layoutX="7.0" layoutY="199.0" prefHeight="126.0" prefWidth="125.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="40.0" prefWidth="131.0" text="Total Venta" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="130.0" text="Total Contado" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="131.0" text="Total Credito" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="143.0" layoutY="198.0" prefHeight="113.0" prefWidth="187.0">
+         <children>
+            <Label fx:id="totalventa" alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="237.0" text="\$$$$" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="totalcontado" alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="238.0" text="\$$$$" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="totalcredito" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="187.0" text="\$$$$" textAlignment="RIGHT">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="386.0" layoutY="202.0" prefHeight="120.0" prefWidth="141.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="143.0" text="Total Facturas">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="142.0" text="Facturas Contado">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="147.0" text="Facturas Credito">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="524.0" layoutY="200.0" prefHeight="120.0" prefWidth="76.0">
+         <children>
+            <Label fx:id="totalfacturas" alignment="CENTER" prefHeight="38.0" prefWidth="79.0" text="Unds">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="facturascontado" alignment="CENTER" prefHeight="38.0" prefWidth="79.0" text="Unds">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="facturascredito" alignment="CENTER" prefHeight="38.0" prefWidth="76.0" text="Unds">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+      <BarChart fx:id="barrasContado" animated="false" layoutX="613.0" layoutY="124.0" prefHeight="231.0" prefWidth="583.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis label="Total Factura + IVA" side="LEFT" />
+         </yAxis>
+      </BarChart>
+      <Separator layoutX="17.0" layoutY="188.0" prefHeight="4.0" prefWidth="568.0" />
+      <Separator layoutX="17.0" layoutY="326.0" prefHeight="4.0" prefWidth="568.0" />
+      <Separator layoutX="374.0" layoutY="205.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="12.0" />
+   </children>
+</AnchorPane>

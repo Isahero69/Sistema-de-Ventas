@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EstadosdeCuenta.EstadoCuentaClienteController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="410.0" prefHeight="52.0" prefWidth="511.0" text="Estados de Cuenta" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="41.0" />
+         </font>
+      </Label>
+      <HBox layoutX="21.0" layoutY="207.0" prefHeight="434.0" prefWidth="1036.0">
+         <children>
+            <TableView fx:id="tablaEstadoCuenta" onMouseClicked="#tablaEstadoCuenta" prefHeight="434.0" prefWidth="1040.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+               <columns>
+                  <TableColumn fx:id="id" prefWidth="75.0" text="id" visible="false" />
+                  <TableColumn fx:id="nombre" prefWidth="120.0" text="Nombre" />
+                  <TableColumn fx:id="tipo" prefWidth="75.0" text="Tipo" />
+                  <TableColumn fx:id="plazo" prefWidth="75.0" text="Plazo" />
+                  <TableColumn fx:id="factura" prefWidth="75.0" text="Factura" />
+                  <TableColumn fx:id="valor" prefWidth="75.0" text="Valor Fact" />
+                  <TableColumn fx:id="expedicion" prefWidth="75.0" text="Fecha Expedicion" />
+                  <TableColumn fx:id="vencimiento" prefWidth="75.0" text="Fecha Vencimiento" />
+                  <TableColumn fx:id="estatus" prefWidth="75.0" text="Estatus" />
+               </columns>
+            </TableView>
+         </children>
+      </HBox>
+      <TextField fx:id="BuscarNitCliente" layoutX="138.0" layoutY="150.0" onAction="#BuscarNitCliente" onKeyTyped="#validarnitcliente" prefHeight="34.0" prefWidth="179.0" promptText="Escribe nit del cliente">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="42.0" layoutY="156.0" prefHeight="21.0" prefWidth="87.0" text="NIt Cliente">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="ConsultarEstado" contentDisplay="RIGHT" layoutX="361.0" layoutY="135.0" mnemonicParsing="false" onAction="#ConsultarEstado" prefHeight="63.0" prefWidth="224.0" text="Consultar">
+         <font>
+            <Font name="Century Gothic Bold" size="22.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="47.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/facturasvencidas-peque.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="descargaEstado" alignment="CENTER" contentDisplay="BOTTOM" layoutX="1067.0" layoutY="207.0" mnemonicParsing="false" onAction="#descargaEstado" prefHeight="83.0" prefWidth="153.0" text="Descargar " textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Century Gothic Bold" size="22.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/xlsx.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="salirEstadosCuenta" layoutX="1063.0" layoutY="382.0" mnemonicParsing="false" onAction="#salirEstadosCuenta" prefHeight="52.0" prefWidth="161.0" text="Salir" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Century Gothic Bold" size="22.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="fechaInicial" editable="false" layoutX="134.0" layoutY="97.0" onAction="#fechaInicial" promptText="Seleccione Fecha" />
+      <Label layoutX="42.0" layoutY="99.0" prefHeight="21.0" prefWidth="98.0" text="Fecha Inicial">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="fechaFinal" editable="false" layoutX="425.0" layoutY="97.0" onAction="#fechaFinal" promptText="Seleccione Fecha" />
+      <Label layoutX="339.0" layoutY="99.0" prefHeight="21.0" prefWidth="98.0" text="Fecha Final">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="723.0" layoutY="146.0" prefHeight="21.0" prefWidth="133.0" text="Facturas Vencidas:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="714.0" layoutY="99.0" prefHeight="21.0" prefWidth="142.0" text="Facturas por Pagar:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="facturasPagar" alignment="CENTER" editable="false" layoutX="861.0" layoutY="93.0" prefHeight="34.0" prefWidth="98.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="facturasVencidas" alignment="CENTER" editable="false" layoutX="861.0" layoutY="140.0" prefHeight="34.0" prefWidth="98.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="detalleFactura" layoutX="1063.0" layoutY="313.0" mnemonicParsing="false" onAction="#detalleFactura" prefHeight="52.0" prefWidth="161.0" text="Detalle Factura" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="valor_por_Pagar" alignment="CENTER" editable="false" layoutX="976.0" layoutY="93.0" prefHeight="34.0" prefWidth="207.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="valor_Vencido" alignment="CENTER" editable="false" layoutX="976.0" layoutY="140.0" prefHeight="34.0" prefWidth="207.0">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font>
+      </TextField>
+      <Label fx:id="txtmensaje" layoutX="134.0" layoutY="66.0" prefHeight="25.0" prefWidth="465.0" />
+      <Label alignment="CENTER" layoutX="976.0" layoutY="68.0" prefHeight="21.0" prefWidth="207.0" text="TOTAL" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="861.0" layoutY="68.0" prefHeight="21.0" prefWidth="98.0" text="Cantidad" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtadvertencia" alignment="CENTER_RIGHT" layoutX="170.0" layoutY="132.0" prefHeight="17.0" prefWidth="147.0" textAlignment="RIGHT" textFill="#f80909">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
